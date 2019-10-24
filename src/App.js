@@ -23,7 +23,8 @@ function App() {
       <div className="flexbox">
         <Text 
           title={nasaData.title} 
-          explanation={nasaData.explanation}></Text>
+          explanation={nasaData.explanation}
+        ></Text>
         <Img
           url={nasaData.url}
           title={nasaData.title}
