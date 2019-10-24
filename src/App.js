@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import Img from "./components/img";
+import Text from "./components/text";
 
 function App() {
   const [nasaData, setNasaData] = useState({});
@@ -19,14 +21,14 @@ function App() {
     <div className="App">
       <h1>NASA Photo of the Day App</h1>
       <div className="flexbox">
-        <div className="text">
-          <h2>{nasaData.title}</h2>
-          <p>{nasaData.explanation}</p>
-        </div>
-        <div>
-          <img src={nasaData.url} alt={nasaData.title}></img>
-          <p>{nasaData.date}</p>
-        </div>
+        <Text 
+          title={nasaData.title} 
+          explanation={nasaData.explanation}></Text>
+        <Img
+          url={nasaData.url}
+          title={nasaData.title}
+          date={nasaData.date}
+        ></Img>
       </div>
       <footer>Anna made this!</footer>
     </div>
